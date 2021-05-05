@@ -6,8 +6,10 @@
 trigger:
 - master
 
-pool:
-  vmImage: ubuntu-latest
+pool: 
+  name: Azure Pipelines
+  demands:
+  - agent.os -equals Ubuntu-20.04
 
 steps:
 - task: NodeTool@0
