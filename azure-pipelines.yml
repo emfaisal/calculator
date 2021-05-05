@@ -6,8 +6,13 @@
 trigger:
 - master
 
-pool: 
-  vmImage: ubuntu-latest
+#pool: 
+#  vmImage: ubuntu-latest
+
+pool:
+  name: az400m05l05a-pool
+  demand:
+  - agent.name -equal az400m05-vm0
 
 steps:
 - task: NodeTool@0
